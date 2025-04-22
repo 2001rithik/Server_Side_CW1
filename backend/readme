@@ -1,0 +1,6 @@
+
+## Run
+node server3.js
+
+## Run Docker
+docker run -p 3000:3000 cw
