@@ -1,9 +1,15 @@
-const crypto = require('crypto');
+const { randomBytes } = require('crypto');
 
-function generateApiKey() {
-  return crypto.randomBytes(32).toString('hex');
+/**
+ * Generates a secure API key
+ * @param {number} length - The desired length of the API key in bytes (default: 32)
+ * @returns {string} - The generated API key as hexadecimal string
+ */
+function createSecureApiKey(length = 32) {
+  const bytes = randomBytes(length);
+  return bytes.toString('hex');
 }
 
 module.exports = {
-  generateApiKey
+  createSecureApiKey
 };

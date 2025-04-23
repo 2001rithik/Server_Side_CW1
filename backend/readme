@@ -1,6 +1,48 @@
+# Secure API Middleware Project
+This project includes a secure API backend with Express and a React frontend.
+
+**Student Name**: Rithik Subasinghe
+**Student ID**: 20210166/ w1870601
+**Module**: 6COSC022W – Web Design & Development  
+**Coursework 1** – Secure API Country details Fetch System  
+**Last Updated**: 10th April 2025
+
+
+# Tech Stack
+
+Frontend: React.js (with React Router)
+
+Backend: Node.js + Express.js
+
+Database: SQLite (for users & API keys)
+
+Authentication: JWT (JSON Web Token)
+
+API Integration: https://restcountries.com
+
+# How to Run
+
+1. Clone the Repository
+
+git clone 
+cd country-details-app
+
+2. Start Backend
+
+cd backend
+npm install
+node server.js
+
+3. Start Frontend
+
+cd ../frontend
+npm install
+npm start
+
 
 ## Run
 node server3.js
 
 ## Run Docker
 docker run -p 3000:3000 cw
+

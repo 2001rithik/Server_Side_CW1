@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const { generateCSRFToken } = require('./csrf');  // Import fixed
+const { createCSRFToken } = require('./csrf'); // Import fixed
 require('dotenv').config();
 
 const JWT_SECRET = process.env.JWT_SECRET || "7490099a0b74c86fb29ac375823f3366ca003353b5ed4a255b6b4118165a6d6e";
@@ -24,7 +24,7 @@ const generateToken = (user) => {
             { expiresIn: JWT_EXPIRES_IN }
         );
 
-        const csrfToken = generateCSRFToken();  // Generate CSRF token
+        const csrfToken = createCSRFToken();    // Generate CSRF token
 
         console.log("Successfully generated tokens.");
         return { accessToken, csrfToken };

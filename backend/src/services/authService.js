@@ -17,6 +17,7 @@ class AuthService {
         if (!isMatch) return null;
 
         const { accessToken, csrfToken } = generateToken(user);
+        
         const apiKey = await this.generateOrFetchApiKey(user.id);
 
         return {
